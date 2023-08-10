@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile version</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="screenWrapper">
+      <div class="containerWrapperOuter">
+        <div class="containerWrapperInner">
+          <div class="header">
+            <div class="goBack">
+              <button class="goBackButton" id="goBackButton" type="button">
+                <img
+                  class="goBackButtonImage"
+                  src="../../assets/icon/returnImageLight.png"
+                  alt="goBackButton"
+                />
+              </button>
+            </div>
+            <div class="titleWrapper">
+              <h1 class="titleSpan">Shopping cart</h1>
+            </div>
+            <div class="headerButtonsContainer">
+              <button
+                class="buttonHeaderGeneric selected"
+                id="products"
+                type="button"
+              >
+                <div class="buttonHeaderGenericSpan">Products</div>
+              </button>
+              <button class="buttonHeaderGeneric" id="address" type="button">
+                <div class="buttonHeaderGenericSpan">Address</div>
+              </button>
+              <button class="buttonHeaderGeneric" id="payment" type="button">
+                <div class="buttonHeaderGenericSpan">Payment</div>
+              </button>
+            </div>
+          </div>
+          <div class="productsMain">
+            <div class="contentsContainer" id="productsContentsMain">
+              <div class="itemsMain">
+                <div class="itemGenericContainer">
+                  <div class="itemImageWrapper">
+                    <img
+                      class="itemImage"
+                      src="../../assets/icon/dactylManuform.jpg"
+                      alt="itemImage"
+                    />
+                  </div>
+                  <div class="itemSpanWrapper">
+                    <span class="itemName">Dactyl Manuform</span>
+                    <span class="itemDescription"
+                      >Teclado ergonômico curvado Dactyl Manuform</span
+                    >
+                    <span class="itemPrice">$200</span>
+                  </div>
+                  <div class="itemQuantity">
+                    <button class="itemQuantityChooseButtonAdd" type="button">
+                      +
+                    </button>
+                    <span class="itemQuantityResult">1</span>
+                    <button class="itemQuantityChooseButtonMinus" type="button">
+                      -
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="confirmProducts">
+              <div class="totalPriceOrder">
+                <span>Order total:</span>
+                <span class="finalPriceSpan">$200.00</span>
+              </div>
+              <button class="continueButtonProducts">
+                <div class="continueButtonSpan">CONTINUE</div>
+              </button>
+            </div>
+          </div>
+          <div class="addressMain">
+            <div class="addressMainContainer">
+              <h2 class="shippingAddressTitle">Your shipping address:</h2>
+              <div class="addressMajorContainer">
+                <div class="addressMinorContainer">
+                  <div class="addressSmallGenericInput">
+                    <span class="addressSmallInfo">Pincode</span>
+                    <input
+                      class="addressSmallInput"
+                      placeholder="6 digit pincode"
+                      type="tel"
+                    />
+                  </div>
+                  <div class="addressSmallGenericButton">
+                    <span class="addressSmallInfo">State</span>
+                    <button class="addressSmallButton" type="button">
+                      <div class="addressSmallButtonSpan">
+                        Select State
+                        <img
+                          class="downChevron"
+                          src="../../assets/icon/downChevron.png"
+                        />
+                      </div>
+                    </button>
+                    <div class="dropdownContentRegions" id="regionsDropdown">
+                      <p class="dropdownItem1">Rio de Janeiro</p>
+                      <p class="dropdownItem1">São Paulo</p>
+                      <p class="dropdownItem1">Espírito Santo</p>
+                      <p class="dropdownItem1">Paraná</p>
+                      <p class="dropdownItem1">Santa Catarina</p>
+                      <p class="dropdownItem1">Rio Grande do Sul</p>
+                    </div>
+                  </div>
+                  <div class="addressSmallGenericInput">
+                    <span class="addressSmallInfo">District</span>
+                    <input
+                      class="addressSmallInput"
+                      placeholder="Type your District"
+                    />
+                  </div>
+                </div>
+                <div class="addressSmallGenericInput">
+                  <span class="addressSmallInfo">City/town</span>
+                  <input
+                    class="addressSmallInput"
+                    placeholder="Type your City"
+                  />
+                </div>
+                <div class="addressBigGenericInput">
+                  <span class="addressBigInfo">Complete address</span>
+                  <textarea
+                    rows="4"
+                    class="addressBigInput"
+                    placeholder=""
+                  ></textarea>
+                </div>
+              </div>
+              <div class="addressContinueButtonWrapper">
+                <button class="continueButtonAddress">
+                  <div class="continueButtonSpan">CONTINUE</div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="paymentMain">
+            <div class="paymentMethod">
+              <span class="paymentMethodSpan"
+                >Please select a payment method</span
+              >
+              <button class="paymentMethodButton" type="button">
+                <div class="paymentMethodButtonContents">
+                  <span>Visa (National) </span>
+                  <img
+                    class="downChevron"
+                    src="../../assets/icon/downChevron.png"
+                    alt="downChevron"
+                  />
+                </div>
+              </button>
+            </div>
+            <div class="termsAndService">
+              <input class="termsAndServiceButton" type="checkbox" />
+              <span
+                >I agree to the terms of <a href="#">AmazingCompany.</a></span
+              >
+            </div>
+            <div class="prices">
+              <div class="subtotalPrice">
+                <span>Subtotal:</span
+                ><span class="subtotalPriceSpan">$200.00</span>
+              </div>
+              <div class="linePrices"></div>
+              <div class="totalPrice">
+                <span class="totalPriceSpanFinal"
+                  >Total <span class="lightFont"> with taxes:</span></span
+                >
+                <span class="finalPriceSpan" id="finalPrice">$220.00</span>
+              </div>
+            </div>
+            <div class="confirmPucharse">
+              <button class="confirmPucharseButton" type="button">
+                <div class="confirmPucharseSpan">Confirm pucharse</div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./hooks/index.js"></script>
+  </body>
+</html>
